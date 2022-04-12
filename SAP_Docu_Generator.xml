@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Generátor dokumentace pro systém SAP</title>
+        <subtitle>Uživatelský manuál</subtitle>
+        <author>
+            <personname>
+                <firstname>Petr</firstname>
+                <surname>Kaiser</surname>
+            </personname>
+         </author>
+    </info>
+
+
+    <chapter>
+        <title>O programu</title>
+        <para>Generátor dokumentace pro systém SAP umožňuje vytvářet externí dokumentaci pro vybrané
+            objekty jazyka ABAP. Dokumentace je sestavována z metadat jednotlivých objektů a z
+            dokumentačních komentářů obsažených v kódu objektů. Pro každý objekt program vygeneruje
+            dokumentaci ve formátu <emphasis role="bold">.docx</emphasis>. Nadále program umožňuje
+            exportovat obsah tabulky do formátu <emphasis role="bold">.xlsx</emphasis>. Program také
+            umožňuje generovat dokumentaci pro objekty obsažené v <emphasis role="bold"
+                >Paketu</emphasis> nebo <emphasis role="bold">Transportním
+            požadavku</emphasis>.</para>
+        <sect1 xml:id="podporovane_objekty">
+            <title>Přehled podporovaných objektů</title>
+            <para>Program je schopen generovat dokumentaci pro následující objekty jazyka ABAP:<itemizedlist>
+                    <listitem>
+                        <para><emphasis role="bold">Metoda</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Třída</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Program</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Tabulka</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Funkční modul</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Skupina funkcí</emphasis></para>
+                    </listitem>
+                </itemizedlist></para>
+        </sect1>
+    </chapter>
+    
+    <chapter>
+        <title>Spuštění programu</title>
+        <sect1>
+            <title>Před spuštěním</title>
+            <para>Pro spuštění programu je potřeba mít přístup do systému SAP. Doporučeným klientem
+                je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. Ve
+                standardním SAP Logonu jej lze spustit pomocí dvou základním nástrojů:<itemizedlist>
+                    <listitem>
+                        <para>ABAP Editor</para>
+                    </listitem>
+                    <listitem>
+                        <para>Object Navigator</para>
+                    </listitem>
+                </itemizedlist></para>
+        </sect1> 
+        <sect1>
+            <title>Spuštění v ABAP Editoru</title>
+            <para>V ABAP Editoru zadejte název programu <emphasis role="bold"
+                >ZDOCU_GEN</emphasis>.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/abap_editor1.png"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Stiskněte tlačítko <emphasis role="bold">Provedení</emphasis> pro provedení
+                reportu.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/abap_editor2.png"/>
+                    </imageobject>
+                </inlinemediaobject></para> 
+        </sect1>
+        <sect1>
+            <title>Spuštění v Object Navigatoru</title>
+            <para>V Object Navigatoru vyberte paket <emphasis role="bold">ZDOCU</emphasis>.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/on1.PNG"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>V  adresáři <emphasis role="bold">Programy</emphasis> vyberte program <emphasis
+                    role="bold">ZDOCU_GEN</emphasis>.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/on2.PNG"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Tento program spustíte <emphasis role="bold">jedním</emphasis> z následujících
+                dvou způsobů:<itemizedlist>
+                    <listitem>
+                        <para>Klikněte <emphasis role="bold">pravým tlačítkem myši </emphasis>na
+                            program <emphasis role="bold">ZDOCU_GEN</emphasis> a vyberte <emphasis
+                                role="bold">Provedení → Přímo</emphasis>.</para>
+                        <para><inlinemediaobject>
+                                <imageobject>
+                                    <imagedata scale = "80" fileref="img/on3.png"/>
+                                </imageobject>
+                            </inlinemediaobject></para>
+                    </listitem>
+                    <listitem>
+                        <para>Dvakrát klikněte <emphasis role="bold">levým tlačítkem myši</emphasis>
+                            na programu <emphasis role="bold">Z_DOCU_GEN</emphasis>. Tím se spustí
+                            ABAP Editor a zobrazí se zdrojový kód programu. Následně stiskněte
+                            tlačítko <emphasis role="bold">Přímo</emphasis> pro provedení
+                            reportu.</para>
+                        <para><inlinemediaobject>
+                                <imageobject>
+                                    <imagedata scale = "50" fileref="img/on4.PNG"/>
+                                </imageobject>
+                            </inlinemediaobject></para>
+                    </listitem>
+                </itemizedlist></para>
+        </sect1>
+    </chapter>
+    
+    <chapter>
+        <title>Použití programu</title>
+        <para>Pro správnou funkčnost programu je potřeba vybrat objekty, pro které chcete generovat
+            dokumentaci a vybrat výsledný adresář.</para>
+        <sect1>
+            <title>Generovaní dokumentace pro objekt</title>
+            <para>Pro generování dokumentace k paketu označte zaškrtávací pole vedle možnosti
+                    <emphasis role="bold">Objekt</emphasis>.</para>
+            <sect2 xml:id="vyber_typu_objektu">
+                <title>Výběr typu objektu</title>
+                <para>Do prvního pole formuláře vyplňte typ objektu.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "80" fileref="img/obj1.PNG"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+                <sect3>
+                    <title>Zobrazení všech podporovaných typů objektů</title>
+                    <para>Pro zobrazení všech <link linkend="podporovane_objekty">podporovaných typů
+                            objektů</link> klikněte na tlačítko napravo od tohoto formuláře. Pro vybrání
+                        určitého objektu klikněte dvakrát levým tlačítkem myši na na řádek v tabulce s
+                        požadovaným objektem.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "80" fileref="img/obj2.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                </sect3>
+            </sect2>
+            <sect2>
+                <title>Výběr objektu dle názvu</title>
+                <para>Po vyplnění typu objektu vyplňte do druhého formuláře název objektu. Pokud
+                    objekt vybraného typu s vybraným názvem ve vašem SAP systému existuje, tak pro
+                    něj program vygeneruje dokumentaci.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "80" fileref="img/obj3.png"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+             <sect3>
+                 <title>Vícenásobný výběr</title>
+                 <para>Pro výběr více objektů klikněte na tlačítko <emphasis role="bold">Vícenásobný
+                            výběr</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "80" fileref="img/obj4.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Zobrazí se tabulka. Do řádků této tabulky vkládejte názvy dalších objektů.
+                        Vkládané objekty musí být stejného typu, vámi vybraného v kapitole <link
+                            linkend="vyber_typu_objektu">Výběr typu objektu</link>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "80" fileref="img/obj5.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Pro potvrzení změn stiskněte tlačítko <emphasis role="bold">Kontrola
+                            zadání</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "80" fileref="img/obj6.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+             </sect3>
+            </sect2>
+        </sect1>
+        <sect1>
+            <title>Generování dokumentace pro paket</title>
+            <para>Pro generování dokumentace k paketu označte zaškrtávací pole vedle možnosti
+                    <emphasis role="bold">Paket</emphasis> a do pole formuláře vyplňte název
+                požadovaného paketu. Pokud paket se zadaným názvem ve vašem SAP systému existuje,
+                tak v něm po spuštění program identifikuje veškeré <link
+                    linkend="podporovane_objekty">podporované objekty</link> pro každý vygeneruje
+                dokumentaci.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/paket1.PNG"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+        </sect1>
+        <sect1>
+            <title>Generování dokumentace pro transportní požadavek</title>
+            <para>Pro generování dokumentace k transportnímu požadavku označte zaškrtávací pole
+                vedle možnosti <emphasis role="bold">Požadavek/úloha</emphasis> a do pole formuláře
+                vyplňte název požadovaného transportního požadavku. Pokud transportní požadavek se
+                zadaným názvem ve vašem SAP systému existuje, tak v něm po spuštění  program
+                identifikuje veškeré <link linkend="podporovane_objekty">podporované objekty</link>
+                pro každý vygeneruje dokumentaci.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/transport1.PNG"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+        </sect1>
+        <sect1>
+            <title>Výběr umístění vygenerované dokumentace</title>
+            <para>Do pole <emphasis role="bold">Lokální adresář</emphasis> zadejte požadované
+                umístění vygenerované dokumentace. Pro výběr výsledného umístění pomocí průzkumníka
+                souborů stiskněte tlačítko na pravé straně pole. V připadě nevyplnění pole bude
+                dokumentace vygenerována do implicitního adresáře SAP GUI (standardně
+                    <emphasis>Dokumenty/SAP/SAPGUI</emphasis>).</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/output.PNG"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+        </sect1>
+        <sect1>
+            <title>Spuštění procesu generování dokumentace</title>
+            <para>Proces generování dokumentace spustíte stisknutím tlačítka <emphasis role="bold"
+                    >Provedení</emphasis>.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/provedeni.PNG"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <sect2>
+                <title>Dialogová okna</title>
+                <para>V průběhu generování může docházet k zobrazování dialogových oken, kdy vás
+                    program žádá o povolení k vytvoření souboru na disku. Toto dialogové okno
+                    odsouhlaste stisknutím tlačítka <emphasis role="bold">Povolení</emphasis>. V
+                    případě, že nechcete, aby se vám dialogové okno zobrazilo i příště, tak
+                    zaškrtněte možnost <emphasis role="bold">Uchování mého
+                    rozhodnutí</emphasis>.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "80" fileref="img/dialog.PNG"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+            </sect2>
+            <sect2>
+                <title>Výsledný přehled</title>
+                <para>Po provedení procesu generování zobrazí program výsledný přehled všech
+                    objektů, pro které byla vegenerována dokumentace včetně výsledného umístění
+                    jednotlivých vytvořených souborů. Zpět do hlavního menu se dostanete stisknutím
+                    tlačítka <emphasis role="bold">Zpět</emphasis>.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "80" fileref="img/zpet.PNG"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+            </sect2>
+        </sect1>
+        <sect1>
+            <title>Šablony</title>
+            <sect2>
+                <title>Tvorba nové šablony</title>
+                <para>Každá šablona se skládá ze dvou částí:<itemizedlist>
+                        <listitem>
+                            <para>šablonový soubor</para>
+                        </listitem>
+                        <listitem>
+                            <para>název šablony</para>
+                        </listitem>
+                    </itemizedlist></para>
+                <sect3>
+                    <title>Nahrání šablonového souboru</title>
+                    <para>Pro nahrání šablonového souboru stiskněte tlačítko <emphasis role="bold"
+                            >Nahrát šablonu</emphasis>. Tím se otevře okno průzkumníka souborů a v
+                        něm vyberte požadovaný šablonový soubor.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "65" fileref="img/sab1.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>V průběhu nahrávání souboru může dojík k zobrazování dialogového oken, kdy
+                        vás program žádá o povolení k přístupu k souboru. Toto dialogové okno
+                        odsouhlaste stisknutím tlačítka <emphasis role="bold">Povolení</emphasis>. V
+                        případě, že nechcete, aby se vám dialogové okno zobrazilo i příště, tak
+                        zaškrtněte možnost <emphasis role="bold">Uchování mého
+                        rozhodnutí</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "80" fileref="img/sab6.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Tímto způsobem dojde k nahrání šablonového souboru do MIME repozitáře
+                            (<emphasis>/SAP/PUBLIC/Docu_templates</emphasis>).</para>
+                </sect3>
+                <sect3>
+                    <title>Přiřazení názvu šablony nahranému souboru</title>
+                    <para>Po nahrání šablonového souboru do MIME repozitáře je potřeba vytvořit
+                        novou šablonu v tabulce šablon. Pro úpravu tabulky s šablonami klikněte na
+                        tlačítko <emphasis role="bold">Nastavení</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "65" fileref="img/sab2.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>V dialogové struktuře vyberte tabulku <emphasis role="bold"
+                            >Šablony</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "70" fileref="img/sab7.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Pro přidání šablony do tabulky s šablonami klikněte na tlačítko <emphasis
+                            role="bold">Nové záznamy</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "70" fileref="img/sab9.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Tím dojde k zobrazení okna pro přidávání záznamů do tabulky. Do sloupce
+                            <emphasis role="bold">Šablona</emphasis> vyplňte název nové šablony. Do
+                        sloupce <emphasis role="bold">URL na objekt MIME</emphasis> vyplňte cestu k
+                        souboru v MIME repozitáři. Standardní cesta je <emphasis role="bold"
+                            >/SAP/PUBLIC/Docu_templates/&lt;nazev_sablonoveho_souboru></emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "70" fileref="img/sab10.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Následně provedené změny uložte kniknutím na tlačítko <emphasis role="bold"
+                            >Uložení</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "70" fileref="img/sab11.PNG"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                </sect3>
+            </sect2>
+            <sect2>
+                <title>Výběr šablony</title>
+                <para>Pro výběr šablony pro určitý objekt klikněte na tlačítko <emphasis role="bold"
+                        >Nastavení</emphasis>.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "65" fileref="img/sab2.png"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+                <para>V dialogové struktuře vyberte tabulku <emphasis role="bold"
+                    >Objekty</emphasis>.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "72" fileref="img/sab8.PNG"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+                <para>Pro změnu šablony vyberte v tabulce v řádku s daným objektem sloupec <emphasis
+                        role="bold">Šablona</emphasis> a do tohoto pole vyplňte název nové šablony. </para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "50" fileref="img/sab3.png"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+                <para>Pro zobrazení všech dostupných šablon klikněte na tlačítko na pravé straně
+                    pole. Zde vyberte požadovanou šablonu.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "80" fileref="img/sab5.png"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+                <para>Pro uložení provedených změn stiskněte tlačítko <emphasis role="bold"
+                        >Uložení</emphasis>.</para>
+                <para><inlinemediaobject>
+                        <imageobject>
+                            <imagedata scale = "60" fileref="img/sab4.png"/>
+                        </imageobject>
+                    </inlinemediaobject></para>
+            </sect2>
+        </sect1>
+        <sect1>
+            <title>Další funkce</title>
+            <sect2>
+                <title>Varianty</title>
+                <para>Program umožňuje uložení aktuálního stavu v podobě pojmenované varianty. Tuto
+                    variantu lze následně vyvolat.</para>
+                <sect3>
+                    <title>Uložení varianty</title>
+                    <para>Pro uložení aktuálního stavu programu stiskněte tlačítko <emphasis
+                            role="bold">Uložit jako variantu</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "70" fileref="img/var1.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Zobrazí se okno pro nastavení atributů varianty. Zde vyplňte pole
+                            <emphasis role="bold">Náz. varianty</emphasis> a <emphasis role="bold"
+                            >Význam</emphasis>. Následně variantu uložte stiskem tlačítka <emphasis
+                            role="bold">Uložení</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "40" fileref="img/var2.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                </sect3>
+                <sect3>
+                    <title>Vyvolání varianty</title>
+                    <para>Pro vyvolání varianty stiskněte tlačítko <emphasis role="bold">Vyvolání
+                            varianty</emphasis>.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "70" fileref="img/var3.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                    <para>Zobrazí se okno všech uložených variant pro program. V něm vyberte
+                        požadovanou variantu.</para>
+                    <para><inlinemediaobject>
+                            <imageobject>
+                                <imagedata scale = "80" fileref="img/var4.png"/>
+                            </imageobject>
+                        </inlinemediaobject></para>
+                </sect3>
+            </sect2>
+        </sect1>
+    </chapter>
+    
+    <chapter>
+        <title>Obsah vygenerované dokumentace</title>
+        <para>Pro jednotlivé objekty jazyka ABAP se liší obsah vygenerované dokumentace. TODO</para>
+    </chapter>
+    
+    <chapter>
+        <title>Kódy transakcí</title>
+        <itemizedlist>
+            <listitem>
+                <para>SE38 - ABAP Editor</para>
+            </listitem>
+            <listitem>
+                <para>SE80 - Object Navigator</para>
+            </listitem>
+        </itemizedlist>
+        
+    </chapter>
+    
+    <chapter>
+        <title>Klávesové zkratky</title>
+        <itemizedlist>
+            <listitem>
+                <para>Enter - kontrola zadání</para>
+            </listitem>
+            <listitem>
+                <para>F3 - zpět</para>
+            </listitem>
+            <listitem>
+                <para>F5 - nové záznamy</para>
+            </listitem>
+            <listitem>
+                <para>F8 - provedení reportu</para>
+            </listitem>
+            <listitem>
+                <para>F12 - zrušení</para>
+            </listitem>
+            <listitem>
+                <para>Ctrl + S - uložení</para>
+            </listitem>
+            <listitem>
+                <para>Ctrl + F2 - nahrání šablony</para>
+            </listitem>
+            <listitem>
+                <para>Shift  + F5 - vyvolání varianty</para>
+            </listitem>
+        </itemizedlist>
+        
+    </chapter>
+    
+
+</book>
