@@ -55,12 +55,12 @@
             <title>Před spuštěním</title>
             <para>Pro spuštění programu je potřeba mít přístup do systému SAP. Doporučeným klientem
                 je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. Ve
-                standardním SAP Logonu jej lze spustit pomocí dvou základním nástrojů:<itemizedlist>
+                standardním SAP Logonu jej lze spustit pomocí:<itemizedlist>
                     <listitem>
-                        <para>ABAP Editor</para>
+                        <para>ABAP Editoru,</para>
                     </listitem>
                     <listitem>
-                        <para>Object Navigator</para>
+                        <para>Object Navigatoru.</para>
                     </listitem>
                 </itemizedlist></para>
         </sect1> 
@@ -68,11 +68,11 @@
             <title>Spuštění v ABAP Editoru</title>
             <para>V ABAP Editoru zadejte název programu <emphasis role="bold"
                 >ZDOCU_GEN</emphasis>.</para>
-            <para><inlinemediaobject>
+            <para><mediaobject>
                     <imageobject>
                         <imagedata scale = "80" fileref="img/abap_editor1.png"/>
                     </imageobject>
-                </inlinemediaobject></para>
+                </mediaobject></para>
             <para>Stiskněte tlačítko <emphasis role="bold">Provedení</emphasis> pro provedení
                 reportu.</para>
             <para><inlinemediaobject>
@@ -195,8 +195,8 @@
             <para>Pro generování dokumentace k paketu označte zaškrtávací pole vedle možnosti
                     <emphasis role="bold">Paket</emphasis> a do pole formuláře vyplňte název
                 požadovaného paketu. Pokud paket se zadaným názvem ve vašem SAP systému existuje,
-                tak v něm po spuštění program identifikuje veškeré <link
-                    linkend="podporovane_objekty">podporované objekty</link> pro každý vygeneruje
+                tak v něm program po spuštění identifikuje veškeré <link
+                    linkend="podporovane_objekty">podporované objekty</link>  a pro každý vygeneruje
                 dokumentaci.</para>
             <para><inlinemediaobject>
                     <imageobject>
@@ -209,9 +209,9 @@
             <para>Pro generování dokumentace k transportnímu požadavku označte zaškrtávací pole
                 vedle možnosti <emphasis role="bold">Požadavek/úloha</emphasis> a do pole formuláře
                 vyplňte název požadovaného transportního požadavku. Pokud transportní požadavek se
-                zadaným názvem ve vašem SAP systému existuje, tak v něm po spuštění  program
+                zadaným názvem ve vašem SAP systému existuje, tak v něm program po spuštění
                 identifikuje veškeré <link linkend="podporovane_objekty">podporované objekty</link>
-                pro každý vygeneruje dokumentaci.</para>
+                a pro každý vygeneruje dokumentaci.</para>
             <para><inlinemediaobject>
                     <imageobject>
                         <imagedata scale = "80" fileref="img/transport1.PNG"/>
@@ -271,12 +271,12 @@
             <title>Šablony</title>
             <sect2>
                 <title>Tvorba nové šablony</title>
-                <para>Každá šablona se skládá ze dvou částí:<itemizedlist>
+                <para>Každá šablona se skládá z:<itemizedlist>
                         <listitem>
-                            <para>šablonový soubor</para>
+                            <para>šablonového souboru,</para>
                         </listitem>
                         <listitem>
-                            <para>název šablony</para>
+                            <para>názvu šablony.</para>
                         </listitem>
                     </itemizedlist></para>
                 <sect3>
