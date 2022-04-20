@@ -54,8 +54,8 @@
         <sect1>
             <title>Před spuštěním</title>
             <para>Pro spuštění programu je potřeba mít přístup do systému SAP. Doporučeným klientem
-                je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. Ve
-                standardním SAP Logonu jej lze spustit pomocí:<itemizedlist>
+                je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. V SAP Logonu
+                jej lze spustit pomocí:<itemizedlist>
                     <listitem>
                         <para>ABAP Editoru,</para>
                     </listitem>
@@ -268,7 +268,7 @@
             </sect2>
         </sect1>
         <sect1>
-            <title>Šablony</title>
+            <title>Práce s šablonami</title>
             <sect2>
                 <title>Tvorba nové šablony</title>
                 <para>Každá šablona se skládá z:<itemizedlist>
