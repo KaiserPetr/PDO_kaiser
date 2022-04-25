@@ -28,22 +28,22 @@
             <title>Přehled podporovaných objektů</title>
             <para>Program je schopen generovat dokumentaci pro následující objekty jazyka ABAP:<itemizedlist>
                     <listitem>
-                        <para><emphasis role="bold">Metoda</emphasis></para>
+                        <para><emphasis role="bold">Metoda</emphasis>,</para>
                     </listitem>
                     <listitem>
-                        <para><emphasis role="bold">Třída</emphasis></para>
+                        <para><emphasis role="bold">Třída</emphasis>,</para>
                     </listitem>
                     <listitem>
-                        <para><emphasis role="bold">Program</emphasis></para>
+                        <para><emphasis role="bold">Program</emphasis>,</para>
                     </listitem>
                     <listitem>
-                        <para><emphasis role="bold">Tabulka</emphasis></para>
+                        <para><emphasis role="bold">Tabulka</emphasis>,</para>
                     </listitem>
                     <listitem>
-                        <para><emphasis role="bold">Funkční modul</emphasis></para>
+                        <para><emphasis role="bold">Funkční modul</emphasis>,</para>
                     </listitem>
                     <listitem>
-                        <para><emphasis role="bold">Skupina funkcí</emphasis></para>
+                        <para><emphasis role="bold">Skupina funkcí</emphasis>.</para>
                     </listitem>
                 </itemizedlist></para>
         </sect1>
@@ -54,7 +54,7 @@
         <sect1>
             <title>Před spuštěním</title>
             <para>Pro spuštění programu je potřeba mít přístup do systému SAP. Doporučeným klientem
-                je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. V SAP Logonu
+                je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. V systému SAP
                 jej lze spustit pomocí:<itemizedlist>
                     <listitem>
                         <para>ABAP Editoru,</para>
@@ -126,8 +126,14 @@
     
     <chapter>
         <title>Použití programu</title>
-        <para>Pro správnou funkčnost programu je potřeba vybrat objekty, pro které chcete generovat
-            dokumentaci a vybrat výsledný adresář.</para>
+        <para>Pro správnou funkčnost programu je musíte:<orderedlist>
+                <listitem>
+                    <para>vybrat objekty, pro které chcete genrovat dokumentaci,</para>
+                </listitem>
+                <listitem>
+                    <para>vybrat výstupní adresář.</para>
+                </listitem>
+            </orderedlist></para>
         <sect1>
             <title>Generovaní dokumentace pro objekt</title>
             <para>Pro generování dokumentace k paketu označte zaškrtávací pole vedle možnosti
@@ -142,21 +148,22 @@
                     </inlinemediaobject></para>
                 <sect3>
                     <title>Zobrazení všech podporovaných typů objektů</title>
-                    <para>Pro zobrazení všech <link linkend="podporovane_objekty">podporovaných typů
-                            objektů</link> klikněte na tlačítko napravo od tohoto formuláře. Pro vybrání
-                        určitého objektu klikněte dvakrát levým tlačítkem myši na na řádek v tabulce s
-                        požadovaným objektem.</para>
+                    <para>Pro zobrazení tabulky se všemi <link linkend="podporovane_objekty"
+                            >podporovanými typy objektů</link> klikněte na tlačítko napravo od
+                        tohoto formuláře. </para>
                     <para><inlinemediaobject>
                             <imageobject>
                                 <imagedata scale = "80" fileref="img/obj2.PNG"/>
                             </imageobject>
                         </inlinemediaobject></para>
+                    <para>Pro vybrání určitého objektu klikněte dvakrát levým tlačítkem myši na na
+                        řádek v tabulce s požadovaným objektem.</para>
                 </sect3>
             </sect2>
             <sect2>
                 <title>Výběr objektu dle názvu</title>
                 <para>Po vyplnění typu objektu vyplňte do druhého formuláře název objektu. Pokud
-                    objekt vybraného typu s vybraným názvem ve vašem SAP systému existuje, tak pro
+                    objekt vybraného typu s vybraným názvem ve vašem systému SAP existuje, tak pro
                     něj program vygeneruje dokumentaci.</para>
                 <para><inlinemediaobject>
                         <imageobject>
@@ -194,9 +201,9 @@
             <title>Generování dokumentace pro paket</title>
             <para>Pro generování dokumentace k paketu označte zaškrtávací pole vedle možnosti
                     <emphasis role="bold">Paket</emphasis> a do pole formuláře vyplňte název
-                požadovaného paketu. Pokud paket se zadaným názvem ve vašem SAP systému existuje,
+                požadovaného paketu. Pokud paket se zadaným názvem ve vašem systému SAP existuje,
                 tak v něm program po spuštění identifikuje veškeré <link
-                    linkend="podporovane_objekty">podporované objekty</link>  a pro každý vygeneruje
+                    linkend="podporovane_objekty">podporované objekty</link> a pro každý vygeneruje
                 dokumentaci.</para>
             <para><inlinemediaobject>
                     <imageobject>
@@ -209,7 +216,7 @@
             <para>Pro generování dokumentace k transportnímu požadavku označte zaškrtávací pole
                 vedle možnosti <emphasis role="bold">Požadavek/úloha</emphasis> a do pole formuláře
                 vyplňte název požadovaného transportního požadavku. Pokud transportní požadavek se
-                zadaným názvem ve vašem SAP systému existuje, tak v něm program po spuštění
+                zadaným názvem ve vašem systému SAP existuje, tak v něm program po spuštění
                 identifikuje veškeré <link linkend="podporovane_objekty">podporované objekty</link>
                 a pro každý vygeneruje dokumentaci.</para>
             <para><inlinemediaobject>
@@ -429,11 +436,6 @@
                 </sect3>
             </sect2>
         </sect1>
-    </chapter>
-    
-    <chapter>
-        <title>Obsah vygenerované dokumentace</title>
-        <para>Pro jednotlivé objekty jazyka ABAP se liší obsah vygenerované dokumentace. TODO</para>
     </chapter>
     
     <chapter>
