@@ -13,7 +13,6 @@
 - Návod k použití aplikace:
     1. spuštení aplikace,
     2. výběr objektů pro generování dokumentace,
-    3. generování výsledného dokumentu.
+    3. generování výsledného dokumentu,
+    4. práce s šablonami.
 
-- Popis obsahu vygenerovaného dokumentu (referenční příručka):<br />
-        Co všechno program do dokumentu z vybraných objektů vygeneroval
