@@ -164,9 +164,10 @@
                     </inlinemediaobject></para>
                 <sect3>
                     <title>Zobrazení všech podporovaných typů objektů</title>
-                    <para>Pro zobrazení tabulky se všemi <link linkend="podporovane_objekty"
-                            >podporovanými typy objektů</link> klikněte na tlačítko napravo od
-                        tohoto formuláře. </para>
+                    <para>Pro zobrazení tabulky s podporovanými typy objektů klikněte na tlačítko
+                        napravo od tohoto formuláře. Všechny podporované typy objektů popisuje
+                        kapitola <link linkend="podporovane_objekty">Přehled podporovaných
+                            objektů</link>.</para>
                     <para><inlinemediaobject>
                             <imageobject>
                                 <imagedata scale = "80" fileref="img/obj2.PNG"/>
@@ -218,9 +219,9 @@
             <para>Pro generování dokumentace k paketu označte zaškrtávací pole vedle možnosti
                     <emphasis role="bold">Paket</emphasis> a do pole formuláře vyplňte název
                 požadovaného paketu. Pokud paket se zadaným názvem ve vašem systému SAP existuje,
-                tak v něm program po spuštění identifikuje veškeré <link
-                    linkend="podporovane_objekty">podporované objekty</link> a pro každý vygeneruje
-                dokumentaci.</para>
+                tak v něm program po spuštění identifikuje veškeré podporované objekty a pro každý
+                vygeneruje dokumentaci. Všechny podporované typy objektů popisuje kapitola <link
+                    linkend="podporovane_objekty">Přehled podporovaných objektů</link>.</para>
             <para><inlinemediaobject>
                     <imageobject>
                         <imagedata scale = "80" fileref="img/paket1.PNG"/>
@@ -233,8 +234,9 @@
                 vedle možnosti <emphasis role="bold">Požadavek/úloha</emphasis> a do pole formuláře
                 vyplňte název požadovaného transportního požadavku. Pokud transportní požadavek se
                 zadaným názvem ve vašem systému SAP existuje, tak v něm program po spuštění
-                identifikuje veškeré <link linkend="podporovane_objekty">podporované objekty</link>
-                a pro každý vygeneruje dokumentaci.</para>
+                identifikuje veškeré podporované objekty a pro každý vygeneruje dokumentaci. Všechny
+                podporované typy objektů popisuje kapitola <link linkend="podporovane_objekty"
+                    >Přehled podporovaných objektů</link>.</para>
             <para><inlinemediaobject>
                     <imageobject>
                         <imagedata scale = "80" fileref="img/transport1.PNG"/>
