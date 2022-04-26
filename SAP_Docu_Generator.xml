@@ -48,6 +48,22 @@
                 </itemizedlist></para>
         </sect1>
     </chapter>
+    <chapter>
+        <title>O dokumentaci</title>
+        <para>Tato dokumentace obsahuje pracovní postupy popisující správné použití programu. Při
+            nedodržení pořadí dílčích kroků postupu nebo při vynechání některého z kroků není
+            zaručena správná funkčnost programu.</para>
+        <sect1>
+            <title>Zvýraznění pozic v obrázcích</title>
+            <para>Obrázky v pracovních postupech obsahují zvýraznění pozice popisovaného tlačítka
+                nebo formuláře v podobě červeného obdélníku a červené šipky.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata scale = "80" fileref="img/zvyrazneni.png"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+        </sect1>
+    </chapter>
     
     <chapter>
         <title>Spuštění programu</title>
