@@ -70,8 +70,9 @@
         <sect1>
             <title>Před spuštěním</title>
             <para>Pro spuštění programu je potřeba mít přístup do systému SAP. Doporučeným klientem
-                je <emphasis role="bold">SAP Logon</emphasis>. Program je typu report. V systému SAP
-                jej lze spustit pomocí:<itemizedlist>
+                je <emphasis role="bold">SAP Logon</emphasis>. Program není součástí základního
+                repozitáře SAP, před spuštěním je potřeba jej nejprve nainstalovat. Program je typu
+                report. V systému SAP jej lze spustit pomocí:<itemizedlist>
                     <listitem>
                         <para>ABAP Editoru,</para>
                     </listitem>
